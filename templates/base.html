@@ -6,6 +6,7 @@
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
+
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 
@@ -55,6 +56,7 @@
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
                             href="{% url 'account_logout' %}">Logout</a>
+                        <p class="text-end m-3">You are logged in as {{ user }}</p>
                     </li>
                     {% else %}
                     <li class="nav-item">
@@ -64,6 +66,7 @@
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
                             href="{% url 'account_login' %}">Login</a>
+                        <p class="text-end m-3">You are not logged in</p>
                     </li>
                     {% endif %}
                 </ul>

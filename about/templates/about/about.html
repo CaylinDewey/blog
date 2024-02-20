@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
+
+
 <div class="container mt-5">
     <div class="row">
         <div class="col-4 text-center">
@@ -16,6 +18,12 @@
             <!-- Updated on field goes in here -->
 
             <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+
+            <form method="post">
+                {{ collaborate_form | crispy }}
+                {% csrf_token %}
+                <button class="btn btn-secondary" type="submit">Submit</button>
+            </form>
         </div>
     </div>
 </div>

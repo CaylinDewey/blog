@@ -158,8 +158,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_STORAGE - 'CLOUDINARY_URL=cloudinary://386946853922294:xJ6dXB1AQLo9vPJ64YUVJBTvEBI@dm20dysbj'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 # Default primary key field type
